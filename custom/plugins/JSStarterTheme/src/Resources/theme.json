@@ -1,0 +1,22 @@
+{
+  "name": "JSStarterTheme",
+  "author": "Joel Storr",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@JSStarterTheme"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@StorefrontBootstrap",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/j-s-starter-theme.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ]
+}

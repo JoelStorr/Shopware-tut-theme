@@ -1,0 +1,17 @@
+/.vscode/
+/bin/
+/custom/plugins/DockwareSamplePlugin
+/custom/plugins/SwagPlatformDemoData
+/public
+/src
+/var
+/vendor
+.env
+.htaccess
+composer.json
+/index.html
+install.lock
+license.txt
+phpstan.neon
+phpunit.xml.dist
+PLATFORM_COMMIT_SHA
