@@ -9,9 +9,17 @@
         {% set birthdateYear = data.birthday|date('Y') %}
        
 
-        {% set datePickerPlugInOptions = {
-            enableTime: false,
-        } %}
+        {% 
+            set datePickerPluginOptions = {
+                enableTime: false,
+                dateFormat: 'Y-m-d',
+                selectors: {
+                    inputDay: '#birthdayDay',
+                    inputMonth: '#birthdayMonth',
+                    inputYear: '#birthdayYear',
+                }
+            } 
+        %}
 
 
         <input 
@@ -23,9 +31,9 @@
         />
         
         {# Needs to match the Expected Types in the Symfony controller #}
-        <input type="hidden" name="birthday" value="{{birthdateDay}}" />
-        <input type="hidden" name="birthday" value="{{birthdateMonth}}" />
-        <input type="hidden" name="birthday" value="{{birthdateYear}}" />
+        <input type="hidden" id="birthdayDay" name="birthday" value="{{birthdateDay}}" />
+        <input type="hidden" id="birthdayMonth" name="birthday" value="{{birthdateMonth}}" />
+        <input type="hidden" id="birthdayYear" name="birthday" value="{{birthdateYear}}" />
 
     </div>
 {% endblock %} 
