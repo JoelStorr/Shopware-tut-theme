@@ -1,0 +1,31 @@
+{% sw_extends '@Storefront/storefront/page/account/profile/personal.html.twig' %}
+
+
+ {% block page_account_profile_personal_fields_birthday_selects %}
+    <div class="{{ formRowClass }}">
+        {% set birthdate = data.birthday|date('Y-m-d') %}
+        {% set birthdateDay = data.birthday|date('d') %}
+        {% set birthdateMonth = data.birthday|date('m') %}
+        {% set birthdateYear = data.birthday|date('Y') %}
+       
+
+        {% set datePickerPlugInOptions = {
+            enableTime: false,
+        } %}
+
+
+        <input 
+            class="form-control"
+            name="birthday" 
+            value="{{birthdate}}" 
+            data-date-picker-options='{{datePickerPluginOptions|json_encode}}'
+            data-date-picker
+        />
+        
+        {# Needs to match the Expected Types in the Symfony controller #}
+        <input type="hidden" name="birthday" value="{{birthdateDay}}" />
+        <input type="hidden" name="birthday" value="{{birthdateMonth}}" />
+        <input type="hidden" name="birthday" value="{{birthdateYear}}" />
+
+    </div>
+{% endblock %} 
