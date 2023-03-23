@@ -1,0 +1,24 @@
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig'%}
+
+
+
+{% block layout_footer_navigation_columns %}
+
+    {{ parent() }}
+    <div class="col-md-4 footer-column" >
+      <div class="footer-column-headline footer-headline">
+        Company data:
+      </div>
+      <div class="footer-column-content-inner">
+        <dl>
+            <dt>
+                VAT ID:
+            </dt>
+            <dd>
+                {{ context.salesChannel.translated.customFields.company_data_vatid }} <br/>
+            </dd>
+        </dl>
+      </div>
+    </div>
+
+{% endblock %}
