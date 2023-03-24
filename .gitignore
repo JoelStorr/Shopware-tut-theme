@@ -15,3 +15,5 @@ license.txt
 phpstan.neon
 phpunit.xml.dist
 PLATFORM_COMMIT_SHA
+
+node_modules
