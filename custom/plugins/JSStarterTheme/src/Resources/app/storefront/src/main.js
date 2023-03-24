@@ -1,5 +1,5 @@
 import ExtendDatePicker from "./plugin/extend-date-picker.plugin";
-import ColorPickerPlugin from './colorpicker';
+import ColorPickerPlugin from './plugin/colorpicker.plugin';
 
 const PluginManager = window.PluginManager;
 
